@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vla-tpu"
+version = "0.1.0"
+description = "JAX/Flax VLA training, serving, and TPU validation scaffold"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flax>=0.10.0",
+    "jax>=0.4.30",
+    "numpy>=1.24,<3",
+    "optax>=0.2.3",
+    "orbax-checkpoint>=0.6.4",
+    "PyYAML>=6.0",
+    "tyro>=0.8.12",
+]
+
+[project.optional-dependencies]
+qwen-ref = [
+    "accelerate>=1.12.0",
+    "pillow>=10.0.0",
+    "qwen-vl-utils>=0.0.14",
+    "safetensors>=0.4.5",
+    "torch>=2.6.0",
+    "transformers>=5.3.0",
+]
+
+qwen-xla = [
+    "accelerate>=1.12.0",
+    "pillow>=10.0.0",
+    "qwen-vl-utils>=0.0.14",
+    "safetensors>=0.4.5",
+    "torch>=2.6.0",
+    "transformers>=5.3.0",
+]
+
+robocasa-data = [
+    "opencv-python-headless>=4.10.0",
+    "pandas>=2.0.0",
+    "pyarrow>=16.0.0",
+]
+
+checkpoint-gcs = [
+    "gcsfs>=2024.6.0",
+]
+
+eval = [
+    "imageio>=2.34.0",
+    "msgpack>=1.0.8",
+    "websockets>=12.0",
+]
+
+tracking = [
+    "wandb>=0.19.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["vla_tpu*"]

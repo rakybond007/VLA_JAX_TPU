@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local virtualenvs and package caches
+.venv/
+.venv-*/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Local/cloud credentials and SDK caches
+.gcloud/
+.local/
+*.pem
+*.key
+*.jsonl
+
+# Experiment artifacts
+/outputs/
+/local_checkpoints/
+/debug_data/
+/logs/
+/slurm_out/
+/wandb/
+*.log
+*.out
+*.err
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+*.pkl
+*.npz
+*.npy
+*.mp4
+!/docs/assets/
+!/docs/assets/*.mp4
+
+# Downloaded datasets and local eval state
+/.libero-local/
+/datasets/
+/data/
+/hf_cache/
+/lerobot/
+
+# Private/internal notes that may contain local paths, experiment logs, or cloud resource details
+/docs/progress_log_*.md
+/docs/claude_handoff_*.md
+/docs/blog_post_draft.md
+/docs/roadmap_*.md
+/docs/backbone_port_plan.md
+
+# Reference clones are documented but not vendored.
+third_party/*
+!third_party/README.md
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
